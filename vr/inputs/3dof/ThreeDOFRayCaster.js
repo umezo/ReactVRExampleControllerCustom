@@ -165,7 +165,7 @@ export default class ThreeDOFRayCaster extends RayCaster {
     this._controllerButton = button;
 
     const controller = new THREE.Object3D();
-    controller.add(beam);
+    //controller.add(beam);
     controller.add(wand);
     controller.add(button);
     this._mesh = controller;
