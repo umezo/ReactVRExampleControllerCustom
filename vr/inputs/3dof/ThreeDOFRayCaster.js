@@ -212,7 +212,12 @@ export default class ThreeDOFRayCaster extends RayCaster {
     if (!this._active) {
       return null;
     }
-    return this._origin;
+
+    if (!this._origin) {
+      return undefined;
+    }
+
+    return [this._origin[0], this._origin[1] - 0.5, this._origin[2]];
   }
 
   /**
